@@ -13,7 +13,7 @@ public class Clothing extends Product{
         return STR."""
                 \{super.toString()}
                 Branch: \{brand}
-                Discount Percentage: \{discountPercentage}
+                Discount Percentage: \{discountPercentage}%
                 Dis. Price: \{getPrice()}
                 """;
     }
