@@ -6,30 +6,13 @@ public class DeptEmployee {
 
     private String name;
     private double salary;
-    private LocalDate hireDay;
+    private LocalDate hireDate;
 
     // constructor
-    DeptEmployee(String aName, double aSalary, LocalDate aHireDay) {
-        name = aName;
-        salary = aSalary;
-        hireDay = aHireDay;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
+    public DeptEmployee(String name, double salary, LocalDate hireDate) {
         this.name = name;
-    }
-
-
-    public LocalDate getHireDay() {
-        return hireDay;
-    }
-
-    public void setHireDay(LocalDate hireDay) {
-        this.hireDay = hireDay;
+        this.salary = salary;
+        this.hireDate = hireDate;
     }
 
     public double computeSalary() {

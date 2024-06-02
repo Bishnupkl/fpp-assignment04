@@ -11,31 +11,33 @@ public class TestMain {
         Professor prof1 = new Professor("Bishnu Pokhrel", 90000, LocalDate.of(2010, 6, 15), 10);
         Professor prof2 = new Professor("Alexandor obligo", 95000, LocalDate.of(2012, 9, 1), 15);
         Professor prof3 = new Professor("Taing Kheang", 92000, LocalDate.of(2015, 3, 10), 8);
-        Secratary sec1 = new Secratary("Nyamdorj Ku", 50000, LocalDate.of(2018, 1, 5), 10);
-        Secratary sec2 = new Secratary("Sunil Poudel", 48000, LocalDate.of(2019, 11, 20), 15);
+        Secretary sec1 = new Secretary("Nyamdorj Ku", 50000, LocalDate.of(2018, 1, 5), 10);
+        Secretary sec2 = new Secretary("Sunil Poudel", 48000, LocalDate.of(2019, 11, 20), 15);
 
 
-        DeptEmployee[] department = new DeptEmployee[5];
+        DeptEmployee[] department = new DeptEmployee[6];
         department[0] = prof1;
         department[1] = prof2;
         department[2] = prof3;
         department[3] = sec1;
         department[4] = sec2;
+        //department[5] is null
 
         Scanner scanner = new Scanner(System.in);
         System.out.print("Want to see total and avg salary of department? (Y/N): ");
         String response = scanner.nextLine();
-//        System.out.println(response);
 
+        int count = 0;
         if (response.toUpperCase().equalsIgnoreCase("Y")) {
-
             double totalSalary = 0;
-
             for (DeptEmployee employee : department) {
-                totalSalary += employee.computeSalary();
+                if(employee != null){
+                    count ++;
+                    totalSalary += employee.computeSalary();
+                }
             }
-
-            double averageSalary = totalSalary / department.length;
+            //don't use totalSalary.length is 6 this case only 5 because department[5] is null;
+            double averageSalary = totalSalary / count;
             System.out.println(STR."The total salary of the department is \{totalSalary}");
             System.out.println(STR."The average salary of the department is \{averageSalary}");
         } else {
