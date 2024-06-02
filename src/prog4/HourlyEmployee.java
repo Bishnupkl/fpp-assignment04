@@ -10,22 +10,6 @@ class HourlyEmployee extends Employee {
         this.hours = hours;
     }
 
-    public double getWage() {
-        return wage;
-    }
-
-    public void setWage(double wage) {
-        this.wage = wage;
-    }
-
-    public double getHours() {
-        return hours;
-    }
-
-    public void setHours(double hours) {
-        this.hours = hours;
-    }
-
     @Override
     public double getPayment() {
         return wage * hours;

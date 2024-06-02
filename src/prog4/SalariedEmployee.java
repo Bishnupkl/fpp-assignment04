@@ -8,15 +8,9 @@ class SalariedEmployee extends Employee {
         this.weeklySalary = weeklySalary;
     }
 
-    public double getWeeklySalary() {
-        return weeklySalary;
-    }
-
-    public void setWeeklySalary(double weeklySalary) {
-        this.weeklySalary = weeklySalary;
-    }
     public double getPayment() {
-        return weeklySalary;
+
+            return weeklySalary;
     }
     @Override
     public String toString() {
