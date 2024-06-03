@@ -15,6 +15,6 @@ public class Refrigerator implements HomeService {
 
     @Override
     public void performFunction() {
-        System.out.println("Cooling items at temperature: " + temperature + "°C.");
+        System.out.println(STR."Cooling items at temperature: \{temperature} °C.");
     }
 }

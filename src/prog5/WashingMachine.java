@@ -15,6 +15,6 @@ public class WashingMachine implements HomeService {
 
     @Override
     public void performFunction() {
-        System.out.println("Starting wash cycle with load capacity: " + loadCapacity + " kg.");
+        System.out.println(STR."Starting wash cycle with load capacity: \{loadCapacity} kg.");
     }
 }

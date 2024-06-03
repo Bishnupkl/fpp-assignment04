@@ -15,13 +15,13 @@ public class Microwave implements HomeService {
     }
 
     public String heatFood() {
-        return "Heating food at power level: " + powerLevel + ".";
+        return STR."Heating food at power level: \{powerLevel}";
     }
 
     @Override
     public void performFunction() {
 
-        System.out.println("Heating food at power level: " + powerLevel + ".");
+        System.out.println(STR."Heating food at power level \{powerLevel}");
 
     }
 }
