@@ -2,7 +2,7 @@ package prog4;
 
 public class Main {
 
-    private static Employee findMaxSalary(Employee[] col) {
+    public static Employee findMaxSalary(Employee[] col) {
         if (col == null || col.length == 0) {
             return null;
         }

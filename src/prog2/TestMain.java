@@ -15,34 +15,33 @@ public class TestMain {
         Secretary sec2 = new Secretary("Sunil Poudel", 48000, LocalDate.of(2019, 11, 20), 15);
 
 
-        DeptEmployee[] department = new DeptEmployee[6];
+        DeptEmployee[] department = new DeptEmployee[5];
         department[0] = prof1;
         department[1] = prof2;
         department[2] = prof3;
         department[3] = sec1;
         department[4] = sec2;
-        //department[5] is null
 
         Scanner scanner = new Scanner(System.in);
         System.out.print("Want to see total and avg salary of department? (Y/N): ");
         String response = scanner.nextLine();
-
-        int count = 0;
-        if (response.toUpperCase().equalsIgnoreCase("Y")) {
-            double totalSalary = 0;
-            for (DeptEmployee employee : department) {
-                if(employee != null){
-                    count ++;
-                    totalSalary += employee.computeSalary();
+        switch (response.toLowerCase()) {
+            case "y":
+                double totalSalary = 0;
+                for (DeptEmployee employee : department) {
+                    if (employee != null) {
+                        totalSalary += employee.computeSalary();
+                    }
                 }
-            }
-            //don't use totalSalary.length is 6 this case only 5 because department[5] is null;
-            double averageSalary = totalSalary / count;
-            System.out.println(STR."The total salary of the department is \{totalSalary}");
-            System.out.println(STR."The average salary of the department is \{averageSalary}");
-        } else {
-            System.out.println("Not any information showing");
+                double averageSalary = totalSalary / department.length;
+                System.out.println(STR."The total salary of the department is \{totalSalary}");
+                System.out.println(STR."The average salary of the department is \{averageSalary}");
+                break;
+            case "n":
+                System.out.println("Not any information showing");
+                break;
+            default:
+                System.out.println("Invalid choice, bye!");
         }
-
     }
 }

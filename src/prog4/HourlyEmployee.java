@@ -2,6 +2,23 @@ package prog4;
 
 class HourlyEmployee extends Employee {
     private double wage;
+
+    public double getWage() {
+        return wage;
+    }
+
+    public double getHours() {
+        return hours;
+    }
+
+    public void setHours(double hours) {
+        this.hours = hours;
+    }
+
+    public void setWage(double wage) {
+        this.wage = wage;
+    }
+
     private double hours;
 
     public HourlyEmployee(String firstName, String lastName, String socialSecurityNumber, double wage, double hours) {
