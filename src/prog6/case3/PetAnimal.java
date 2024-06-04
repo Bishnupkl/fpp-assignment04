@@ -21,6 +21,8 @@ class PetAnimal {
     public void setOwnerName(String owerName) {
         this.owerName = owerName;
     }
+
+    @Override
     public boolean equals(Object ob) {
         if(ob == null) {
             System.out.print("Object is null ");
