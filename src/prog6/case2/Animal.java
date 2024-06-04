@@ -13,13 +13,13 @@ public class Animal {
 
     @Override
     public boolean equals(Object aAnimal) {
-        if(aAnimal == null)
+        if (aAnimal == null)
             return false;
-        if(aAnimal.getClass() != this.getClass())
+        if (aAnimal.getClass() != this.getClass())
             return false;
-        if(aAnimal == this)
+        if (aAnimal == this)
             return true;
-        Animal p = (Animal)aAnimal;
+        Animal p = (Animal) aAnimal;
         return this.name.equals(p.name) ? (this.animalType.equals(p.animalType) ? true : false) : false;
     }
 }
