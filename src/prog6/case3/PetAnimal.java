@@ -27,7 +27,7 @@ class PetAnimal {
             return false;
         }
         if(ob.getClass() != this.getClass()){
-            System.out.print("Object is not of type " + this.getClass().getSimpleName()+ " ");
+            System.out.print("Object is not type of " + this.getClass().getSimpleName()+ " ");
             return false;
         }
         if(this == (PetAnimal)ob) {
