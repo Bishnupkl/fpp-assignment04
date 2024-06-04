@@ -1,5 +1,7 @@
 package prog6.case2;
 
+import prog6.AnimalType;
+
 public class Animal {
     private String name;
     AnimalType type;
