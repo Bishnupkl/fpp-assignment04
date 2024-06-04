@@ -1,14 +1,5 @@
 package prog3;
 
-<<<<<<< Updated upstream
-public class TemperatureSensor extends Connector {
-
-    private double temperature;
-
-    public TemperatureSensor(String location, double temperature) {
-        super(location);
-        this.temperature = temperature;
-=======
 public class TemperatureSensor implements Sensor{
 
     private double temperature;
@@ -17,7 +8,6 @@ public class TemperatureSensor implements Sensor{
     @Override
     public String getSensorType() {
         return this.getClass().getSimpleName();
->>>>>>> Stashed changes
     }
 
     @Override
@@ -26,8 +16,6 @@ public class TemperatureSensor implements Sensor{
     }
 
     @Override
-<<<<<<< Updated upstream
-=======
     public String getLocation() {
         return location.toString();
     }
@@ -37,7 +25,6 @@ public class TemperatureSensor implements Sensor{
     }
 
     @Override
->>>>>>> Stashed changes
     public String performAction() {
         if (temperature > 30) {
             return "Alert: Turn on the AC";

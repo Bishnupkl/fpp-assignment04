@@ -1,14 +1,5 @@
 package prog3;
 
-<<<<<<< Updated upstream
-public class LightSensor extends Connector {
-
-    private double lightLevel;
-
-    public LightSensor(String location, double lightLevel) {
-        super(location);
-        this.lightLevel = lightLevel;
-=======
 public class LightSensor implements Sensor{
 
     private double lightLevel;
@@ -22,7 +13,6 @@ public class LightSensor implements Sensor{
     @Override
     public String getSensorType() {
         return this.getClass().getSimpleName();
->>>>>>> Stashed changes
     }
 
     @Override
@@ -31,14 +21,11 @@ public class LightSensor implements Sensor{
     }
 
     @Override
-<<<<<<< Updated upstream
-=======
     public String getLocation() {
         return location.toString();
     }
 
     @Override
->>>>>>> Stashed changes
     public String performAction() {
         if (lightLevel < 100) {
             return "Alert: Turn on the light";
