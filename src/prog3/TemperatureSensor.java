@@ -1,17 +1,27 @@
 package prog3;
 
-public class TemperatureSensor extends Connector {
+public class TemperatureSensor implements Sensor{
 
     private double temperature;
+    private Location location;
 
-    public TemperatureSensor(String location, double temperature) {
-        super(location);
-        this.temperature = temperature;
+    @Override
+    public String getSensorType() {
+        return this.getClass().getSimpleName();
     }
 
     @Override
     public double getReading() {
         return temperature;
+    }
+
+    @Override
+    public String getLocation() {
+        return location.toString();
+    }
+    public TemperatureSensor(Location location, double temperature) {
+        this.location = location;
+        this.temperature = temperature;
     }
 
     @Override

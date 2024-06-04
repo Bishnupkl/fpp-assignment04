@@ -1,12 +1,11 @@
 package prog3;
 
-public class SoundSensor extends Connector {
+public class SoundSensor implements Sensor {
 
-    private double soundLevel;
-
-    public SoundSensor(String location, double soundLevel) {
-        super(location);
-        this.soundLevel = soundLevel;
+    Location location;
+    @Override
+    public String getSensorType() {
+        return this.getClass().getSimpleName();
     }
 
     @Override
@@ -14,6 +13,17 @@ public class SoundSensor extends Connector {
         return soundLevel;
     }
 
+    @Override
+    public String getLocation() {
+        return this.location.toString();
+    }
+
+    private double soundLevel;
+
+    public SoundSensor(Location location, double soundLevel) {
+        this.location = location;
+        this.soundLevel = soundLevel;
+    }
     @Override
     public String performAction() {
         if (soundLevel > 70) {

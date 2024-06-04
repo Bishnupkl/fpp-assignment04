@@ -1,17 +1,28 @@
 package prog3;
 
-public class LightSensor extends Connector {
+public class LightSensor implements Sensor{
 
     private double lightLevel;
+    private Location location;
 
-    public LightSensor(String location, double lightLevel) {
-        super(location);
+    public LightSensor(Location location, double lightLevel) {
         this.lightLevel = lightLevel;
+        this.location = location;
+    }
+
+    @Override
+    public String getSensorType() {
+        return this.getClass().getSimpleName();
     }
 
     @Override
     public double getReading() {
         return lightLevel;
+    }
+
+    @Override
+    public String getLocation() {
+        return location.toString();
     }
 
     @Override

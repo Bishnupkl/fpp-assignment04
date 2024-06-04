@@ -1,5 +1,8 @@
 package prog3;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
 public interface Sensor {
 
     String getSensorType();
@@ -8,7 +11,9 @@ public interface Sensor {
 
     String getLocation();
 
-    String getLastUpdated();
+    default String getLastUpdated(){
+        return LocalDateTime.now().format(DateTimeFormatter.ofPattern("HH:mm a"));
+    };
 
     String performAction();
 }
