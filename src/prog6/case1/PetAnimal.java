@@ -3,15 +3,15 @@ package prog6.case1;
 import prog6.AnimalType;
 
 public class PetAnimal extends Animal {
-    private String owner_name;
+    private String ownerName;
 
-    PetAnimal(String name, AnimalType type, String owner_name) {
+    PetAnimal(String name, AnimalType type, String ownerName) {
         super(name, type);
-        this.owner_name = owner_name;
+        this.ownerName = ownerName;
 
     }
 
-    public String getOwner_name() {
-        return owner_name;
+    public String getOwnerName() {
+        return ownerName;
     }
 }

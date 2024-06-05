@@ -21,13 +21,15 @@ class PetAnimal {
     public void setOwnerName(String owerName) {
         this.owerName = owerName;
     }
+
+    @Override
     public boolean equals(Object ob) {
         if(ob == null) {
             System.out.print("Object is null ");
             return false;
         }
         if(ob.getClass() != this.getClass()){
-            System.out.print("Object is not of type " + this.getClass().getSimpleName()+ " ");
+            System.out.print("Object is not type of " + this.getClass().getSimpleName()+ " ");
             return false;
         }
         if(this == (PetAnimal)ob) {
