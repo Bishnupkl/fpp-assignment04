@@ -22,9 +22,15 @@ public class PetAnimal extends Animal {
 
     @Override
     public boolean equals(Object withPet) {
-        if (!super.equals(withPet)) return false;
+        if(withPet == null) return false;
+        if(getClass() != withPet.getClass()) return false;
         PetAnimal p = (PetAnimal) withPet;
-        if(this.ownerName.equals(p.ownerName)) return true;
-        return false;
+        return
+            p.ownerName.equals(ownerName)
+                ? p.getAnimalType().equals(getAnimalType())
+                    ? p.getName().equals(getName()) ?
+                    true : false:
+                false :
+            false;
     }
 }

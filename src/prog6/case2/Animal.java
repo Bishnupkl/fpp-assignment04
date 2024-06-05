@@ -10,6 +10,12 @@ public class Animal {
         this.name = name;
         this.animalType = animalType;
     }
+    public String getName() {
+        return name;
+    }
+    public AnimalType getAnimalType() {
+        return animalType;
+    }
 
     @Override
     public boolean equals(Object aAnimal) {
@@ -20,6 +26,10 @@ public class Animal {
         if (aAnimal == this)
             return true;
         Animal p = (Animal) aAnimal;
-        return this.name.equals(p.name) ? (this.animalType.equals(p.animalType) ? true : false) : false;
+        return
+            this.name.equals(p.name)
+                ? this.animalType.equals(p.animalType) ?
+                true : false :
+            false;
     }
 }

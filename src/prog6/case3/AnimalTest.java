@@ -5,19 +5,19 @@ import prog6.AnimalType;
 public class AnimalTest {
     public static void main(String[] args) {
 
-        Animal animalCarnivores = new Animal("Tiger", AnimalType.CARNIVORES);
-        Animal animalHerbivores = new Animal("Panda", AnimalType.HERBIVORES);
+        Animal animal1 = new Animal("Tiger", AnimalType.CARNIVORES);
+        Animal animal2 = new Animal("Panda", AnimalType.HERBIVORES);
 
-        PetAnimal petAnimalCarnivores = new PetAnimal("KHEANG", animalCarnivores);
-        PetAnimal petAnimalHerbivores = new PetAnimal("ALEX", animalHerbivores);
-        PetAnimal petAnimalOmnivores = new PetAnimal("BISNU", new Animal("Bear", AnimalType.OMNIVORES));
-        PetAnimal petAnimalCarnivores2 = petAnimalCarnivores;
+        PetAnimal pet1 = new PetAnimal("KHEANG", animal1);
+        PetAnimal pet2 = new PetAnimal("ALEX", animal2);
+        PetAnimal pet3 = new PetAnimal("BISNU", new Animal("Bear", AnimalType.OMNIVORES));
+        PetAnimal pet4 = pet1;
 
-        System.out.println("petAnimalCarnivores = null: "+ petAnimalCarnivores.equals(null));
-        System.out.println("petAnimalCarnivores = animalCarnivores: " + petAnimalCarnivores.equals(animalCarnivores));
-        System.out.println("petAnimalCarnivores = petAnimalHerbivores: " + petAnimalCarnivores.equals(petAnimalHerbivores));
-        System.out.println("petAnimalCarnivores = petAnimalOmnivores: " + petAnimalCarnivores.equals(petAnimalOmnivores));
-        System.out.println("petAnimalCarnivores = petAnimalCarnivores: " + petAnimalCarnivores.equals(petAnimalCarnivores));
-        System.out.println("petAnimalCarnivores = petAnimalCarnivores2: " + petAnimalCarnivores.equals(petAnimalCarnivores2));
+        System.out.println("pet1.equal(null): "+ pet1.equals(null));
+        System.out.println("pet1.equals(pet2): " + pet1.equals(pet2));
+        System.out.println("pet1.equals(pet3): " + pet1.equals(pet3));
+        System.out.println("pet1.equals(animal1)" + pet1.equals(animal1));
+        System.out.println("animal1.equals(pet1): " + animal1.equals(pet1));
+        System.out.println("pet1.equals(pet4): " + pet1.equals(pet4));
     }
 }
